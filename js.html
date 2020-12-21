@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>js</title>
+        <script type="text/javascript">
+            /*
+            var point = new Object();
+            point.x = 3;
+            point.y = 4;
+            point.getPosition = function(){
+                alert(this.x + "," + this.y);
+            };
+            point.getPosition();
+            
+            var player = new Object();
+            player.name = "cow03";
+            player.hp = 100;
+            player.fight = function(){
+                this.hp -= 2;
+            };
+            player.rest = function(){
+                this.hp++;
+            };
+            player.report = function(){
+                alert(this.name + "：" + this.hp);
+            };
+            player.fight();
+            player.rest();
+            player.report();
+            
+            function Player(name, hp){
+                this.name = name;
+                this.hp = hp;
+                this.fight = function(){
+                    this.hp -= 2
+                };
+                this.rest = function(){
+                    this.hp++
+                };
+                this.report = function(){
+                    alert(this.name + "：" + this.hp);
+                };
+            };
+            var player = new Player("cow", 100);
+            player.fight();
+            player.report();
+            var player2 = new Player("owo", 1000);
+            player2.rest();
+            player2.report();
+            
+            alert(screen.width + "x" + screen.height);
+            function change(){
+                var data = document.getElementById("data");
+                data.innerHTML = "2020/09/20";
+                data.style.color = "red";
+                data.style.fontWeight = "bold";
+                data.style.display = "none";
+            };
+            */
+
+            function toggleMemu(num){
+                var memu = document.getElementById("memu-" + num);
+
+                memu.classList.toggle("hide");
+                /*
+                if(memu.style.display == "none"){
+                    memu.style.display = "block";
+                }
+                else{
+                    memu.style.display = "none";
+                }
+                */
+            };
+                
+            
+            function over(element){
+                element.style.color="red";
+            };
+            function out(element){
+                element.style.color="black";
+            };
+
+            function init(){
+                /*
+                var btn = document.getElementById("btn");
+                btn.onclick = function(){
+                    alert("Clicked");
+                };
+                var handler = function(self){
+                    alert(self.clientX + "," + self.clientY);
+                };
+                btn.addEventListener("click", handler)
+                document.addEventListener("keydown", function (self){
+                    alert(self.keyCode);
+                });
+                */
+                timer = document.getElementById("timer");
+                window.setInterval(countdown, 1000);
+            };
+            function countdown() {
+                
+                if(timer.innerHTML > 0){
+                    /*document.location="https://www.youtube.com/";*/
+                    timer.innerHTML = timer.innerHTML-1;
+                }
+            }
+        </script>
+        <style>
+            .hide{
+                display: none;
+            }
+        </style>
+    </head>
+
+    <body onload="init();">
+        <span id="timer">3</span>
+        <div onclick="toggleMemu(1);">title 1</div>
+        <ul id="memu-1">
+            <li>test 1-1</li>
+            <li>test 1-2</li>
+            <li>test 1-3</li>
+        </ul>
+        <div onclick="toggleMemu(2);">title 2</div>
+        <ul id="memu-2">
+            <li>test 2-1</li>
+            <li>test 2-2</li>
+            <li>test 2-3</li>
+        </ul>
+        <div onclick="toggleMemu(3);">title 3</div>
+        <ul id="memu-3">
+            <li>test 3-1</li>
+            <li>test 3-2</li>
+        </ul>
+        
+        <span onmouseover="over(this);" onmouseout="out(this);">Test</span>
+        <div onmouseover="over(this);" onmouseout="out(this);">Test2</div>
+        <input id="btn" type="button" value="Click"/>
+    </body>
+</html>

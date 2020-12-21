@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord Webhook Tutorial</title>
+  </head>
+  <body>
+    <button onclick="sendMessage()">Send</button>
+  </body>
+
+  <script>
+    function sendMessage() {
+      var request = new XMLHttpRequest();
+      request.open("POST", "https://discordapp.com/api/webhooks/713642629765529602/_lG8IoSqiX_SOvMo_cJgTdP4J03RV3UHVe_Qj4NMpdh82dzN-wyThBUrM4-duApLbdR5");
+
+      request.setRequestHeader('Content-type', 'application/json');
+
+      var params = {
+        "username":"???",
+  	    "avatar_url":"",
+  	    "allowed_mentions":{
+	        "parse": ["users","roles","everyone"]
+  	    },
+  	    "content":"@everyone"
+      }
+       
+      request.send(JSON.stringify(params));
+
+    }
+  </script>
+</html>

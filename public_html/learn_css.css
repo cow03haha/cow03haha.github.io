@@ -1,0 +1,104 @@
+h1 /* 選取元素 */
+{
+    color: red; /* 更改文字顏色 */
+}
+
+p
+{
+    color: black;
+    font-size: large; /* 更改文字大小 */
+    width: 500px; /* 寬度 */
+    background-color: green; /* 更改背景顏色 */
+    border: solid yellow; /* 產生邊界 */
+}
+
+li
+{
+    list-style-type: none; /* 刪除預設樣式 */
+}
+
+.special /* 選取class */
+{
+    font-weight: bold; /* 更改文字粗細 */  
+}
+
+li em /* 選取 li 裡面的 em */
+{
+    color: rebeccapurple;
+}
+
+h1 + p /* 選取 h1接著是 p 的元素 (兩個都選取) */ 
+{
+    font-size: 200%;
+}
+
+p span
+{
+    color: red;
+}
+
+a:link /* 選取 a 並且連結還沒被拜訪時 */
+{
+    color: black;
+}
+
+a:visited /* 選取 a 並且連結已經被拜訪時 */
+{
+    color: pink;
+}
+
+a:hover /* 選取 a 並且當滑鼠移到上面時 */
+{
+    text-decoration: none;
+}
+
+body h1+p .special
+{
+    color: yellow;
+    background-color: black;
+    padding: 5px;
+}
+
+.outer
+{
+border: 5px solid black;
+}
+
+.box
+{
+padding: 10px;
+width: calc(90% - 100px);
+background-color: rebeccapurple;
+color: white;
+}
+
+.box2
+{
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rebeccapurple;
+    transform: rotate(0.8turn);
+}
+
+.box2
+{
+    margin: 30px;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 0, 0);
+}
+
+html
+{
+    background: red url("paper.gif") 10px 10px repeat fixed;
+    text-shadow: 3px 3px 2px black;
+}
+
+@media(min-width: 1500px) /* 選取 media 類型(例如 min-width 是螢幕寬度大於設定的值才會套用) */
+{
+    body
+    {
+        background-color: pink;
+    }
+}

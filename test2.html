@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<style>
+body{font-size: 20px;}
+b{color: red;}
+th{color: orange;}
+</style>
+</head>
+
+<body>
+作答時請善用 <b>?</b> 查詢指令並把握時間</br>
+如果有題目上的問題，請<b>舉手</b>發問</br>
+拓樸中大部份設備已完成配置，您只需完成對指定設備的相關配置</br>
+</br>
+共同項目:</br>
+<ol>
+    <li>主機名稱請設定和設備名稱一致</li>
+</ol>
+Switch設定:</br>
+<ol>
+    <li>配置VTP:</br>
+        交換器SW1、SW2需透過SW0自動學習VLAN資料但不需具備新增/修改或刪除VLAN之功能，VTP域名為<b>owo</b>，不須設置密碼，並在必要埠口設定Trunk協定。</li>
+    <li>配置Vlan:</br>
+        Vlan10的名稱請設定為<b>IT</b>，Vlan20為<b>Sales</b>，並依照下表配置PC0~8，Default Gateway請自行判斷</li>
+        <table border="1">
+            <thead align="center">
+                <tr>
+                    <th width="150">Device</th>
+                    <th width="200">IP</th>
+                    <th width="150">Vlan</th>
+                </tr>
+            </thead>
+        
+            <tbody align="center">
+                <tr>
+                    <td>PC0</td>
+                    <td>192.168.10.1/24</td>
+                    <td rowspan="3">10</td>
+                </tr>
+                <tr>
+                    <td>PC1</td>
+                    <td>192.168.10.2/24</td>
+                </tr>
+                <tr>
+                    <td>PC2</td>
+                    <td>192.168.10.3/24</td>
+                </tr>
+                <tr>
+                    <td>PC3</td>
+                    <td>192.168.20.1/24</td>
+                    <td rowspan="3">20</td>
+                </tr>
+                <tr>
+                    <td>PC4</td>
+                    <td>192.168.20.2/24</td>
+                </tr>
+                <tr>
+                    <td>PC5</td>
+                    <td>192.168.20.3/24</td>
+                </tr>
+                <tr>
+                    <td>PC6</td>
+                    <td rowspan="3">DHCP</td>
+                    <td rowspan="3">1</td>
+                </tr>
+                <tr>
+                    <td>PC7</td>
+                </tr>
+                <tr>
+                    <td>PC8</td>
+                </tr>
+            </tbody>
+        </table>
+    <li>配置PortFast:</br>
+    請在SW3的所有連到PC的介面開啟PortFast，加快STP收斂速度
+</ol>
+Router設定:</br>
+<ol>
+    <li>配置介面:</br>
+        請依照下表設定各個介面
+        <table border="1">
+            <thead align="center">
+                <tr>
+                    <th width="150">Device</th>
+                    <th width="150">Interface</th>
+                    <th width="200">IP</th>
+                </tr>
+            </thead>
+        
+            <tbody align="center">
+                <tr>
+                    <td rowspan="4">R0</td>
+                    <td>Fa 0/0</td>
+                    <td>192.168.60.43/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 0/1</td>
+                    <td>192.168.80.132/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 1/0</td>
+                    <td>172.16.24.254/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 1/1</td>
+                    <td>192.168.50.254/24</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">R1</td>
+                    <td>Fa 0/0</td>
+                    <td>192.168.60.127/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 0/1</td>
+                    <td>192.168.1.254/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 1/0</td>
+                    <td>192.168.70.51/24</td>
+                </tr>
+                <tr>
+                    <td rowspan="3">R2</td>
+                    <td>Fa 0/0</td>
+                    <td>192.168.80.65/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 0/1</td>
+                    <td>192.168.70.208/24</td>
+                </tr>
+                <tr>
+                    <td>Fa 1/0</td>
+                    <td>10.20.30.8/28</td>
+                </tr>
+                <tr>
+                    <td>ISP</td>
+                    <td>Fa 0/0</td>
+                    <td>10.20.30.10/28</td>
+                </tr>
+        </table>
+    </li>
+    <li>配置local user:</br>
+    請為每台路由器設定使用者admin，密碼為Skills39，需採用MD5加密， 並且當一進入路由器時就直接進入Privilege EXEC Mode。</li>
+    <li>配置OSPF:</br>
+        請在每台路由器設定OSPF路由協定，並設為Area2，並且ISP設定為不會往外部發送路由資訊，同時在ISP開啟預設路由更新，讓R0、R1、R2接收預設路由，OSPF的Process ID為2。
+    </li>
+    <li>配置Sub Interface:</br>
+        請為R1的FastEthernet 1/0介面設定子介面並開啟dot1Q封裝，使VLAN 10可以和VLAN 20溝通，並依照下表設置各個介面
+        <table border="1">
+            <thead align="center">
+                <tr>
+                    <th width="150">Interface</th>
+                    <th width="200">IP</th>
+                    <th width="150">Vlan</th>
+                </tr>
+            </thead>
+        
+            <tbody align="center">
+                <tr>
+                    <td>Fa 1/0.10</td>
+                    <td>192.168.10.254/24</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>Fa 1/0.20</td>
+                    <td>192.168.20.254/24</td>
+                    <td>20</td>
+                </tr>
+            </tbody>
+        </table>
+    </li>
+    <li>配置DHCP Relay:</br>
+        在R0上設定DHCP Relay，使PC6~8可以透過DHCP獲得IP，DHCP服務伺服器位址為192.168.10.100</li>
+</ol>
+全部設定皆完成時，每台主機應可互PING且不會發生錯誤，並且可以透過61.56.165.242瀏覽位於WAN的網頁</br>
+</body>
+
+</html>

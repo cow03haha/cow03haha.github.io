@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>media</title>
+        <script type="text/javascript">
+            var video;
+            window.onload = function(){
+                video = document.getElementById("video");
+                video.addEventListener("timeupdate", updateTimer);
+                video.addEventListener("ended", endedProcess);
+            };
+            function updateTimer(){
+                var timer = document.getElementById("timer");
+                timer.innerHTML = video.currentTime + "/" + video.duration;
+            }
+            function endedProcess(){
+                alert("test");
+            }
+            function playVideo(){
+                video.play();
+            }
+            function pauseVideo(){
+                video.pause();
+            }
+            function replyVideo(){
+                video.currentTime = 0;
+                video.play();
+            }
+        </script>
+    </head>
+
+    <body>
+        <video id="video" src="test.mp4"></video>
+        <div>
+            <button onclick="playVideo();">Play</button>
+            <button onclick="pauseVideo();">pause</button>
+            <button onclick="replyVideo();">reply</button>
+            <span id="timer"></span>
+        </div>
+    </body>
+</html>

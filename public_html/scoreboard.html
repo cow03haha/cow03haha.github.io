@@ -4,32 +4,32 @@
         <script src="scoreboard.js"></script>
         <style>
             table{
-                width: 500px;
+                width: 800px;
                 border-collapse: collapse;
                 text-align: center;
             }
             td{
                 border-bottom: 1px solid #888888;
             }
-            /* 表格中的第一對 tr */
-            tr:nth-child(1){
+            /* thead 中的第一對 tr */
+            thead tr:nth-child(1){
                 background-color: #7788aa;
                 color: #ffffff;
             }
-            /* 表格中的偶數對 tr(奇數可以把even改成odd) */
-            tr:nth-child(even){
+            /* tbody 中的偶數對 tr(奇數可以把even改成odd) */
+            tbody tr:nth-child(odd){
                 background-color: #e8e8e8;
             }
 
             #result_area{
-                width: 500px;
-                margin: 0px auto;
+                width: 800px;
+                margin-left: 500px ;
                 padding-top: 20px;
             }
 
             #search_area{
-                width: 500px;
-                margin: 0px auto;
+                width: 600px;
+                margin-left: 600px ;
             }
         </style>
     </head>
@@ -37,24 +37,24 @@
     <body>
         <div id="search_area">
             輸入你的discord名字或id : <input type="text" id="key">
-            <input type="button" value="查詢" onclick="search()"></br>
+            <input type="button" value="查詢" onclick="search()">
+            <input type="button" value="顯示全部" onclick="show_all()"></br>
         </div>
 
         <div id="result_area">
             <table>
-                <tr>
-                    <th>名稱</th>
-                    <th>暱稱</th>
-                    <th>簽到天數</th>
-                    <th>今天是否簽到</th>
-                </tr>
-                
-                <tr>
-                    <td id="name"></td>
-                    <td id="nickname"></td>
-                    <td id="total"></td>
-                    <td id="today"></td>
-                </tr>
+                <thead>
+                     <tr>
+                        <th>名稱</th>
+                        <th>暱稱</th>
+                        <th>簽到天數</th>
+                        <th>今天是否簽到</th>
+                     </tr>
+                </thead>
+               
+                <tbody id="show_result">
+
+                </tbody>
             </table>
         </div>
     </body>

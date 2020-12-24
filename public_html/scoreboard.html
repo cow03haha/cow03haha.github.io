@@ -3,8 +3,12 @@
         <meta charset="utf-8">
         <script src="scoreboard.js"></script>
         <style>
+            body{
+                width: 1400px;
+                background: red url("paper.gif") 10px 10px repeat fixed;
+            }
             table{
-                width: 800px;
+                width: 1000px;
                 border-collapse: collapse;
                 text-align: center;
             }
@@ -21,15 +25,19 @@
                 background-color: #e8e8e8;
             }
 
+            tbody tr:nth-child(even){
+                background-color: #ffffff;
+            }
+
             #result_area{
-                width: 800px;
-                margin-left: 500px ;
+                width: 1000px;
+                margin-left: 200px ;
                 padding-top: 20px;
             }
 
             #search_area{
                 width: 600px;
-                margin-left: 600px ;
+                margin-left: 400px ;
             }
         </style>
     </head>
@@ -45,6 +53,7 @@
             <table>
                 <thead>
                      <tr>
+                         <th>id</th>
                         <th>名稱</th>
                         <th>暱稱</th>
                         <th>簽到天數</th>

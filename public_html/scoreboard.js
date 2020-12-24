@@ -14,24 +14,26 @@ window.onload = function () {
 
 function search()
 {
-    let id = document.getElementById("key").value;
+    let key = document.getElementById("key").value;
 
-    if (jdata.hasOwnProperty(id))
+    if (jdata.hasOwnProperty(key))
     {
         let show_result = document.getElementById("show_result");
         
         let tr = document.createElement("tr");
 
+        let id = document.createElement("td");
         let name = document.createElement("td");
         let nickname = document.createElement("td");
         let total = document.createElement("td");
         let today = document.createElement("td");
 
-        let name_txt = document.createTextNode(jdata[id]["name"]);
-        let nickname_txt = document.createTextNode(jdata[id]["nickname"]);
-        let total_txt = document.createTextNode(jdata[id]["total"]);
+        let id_txt = document.createTextNode(key);
+        let name_txt = document.createTextNode(jdata[key]["name"]);
+        let nickname_txt = document.createTextNode(jdata[key]["nickname"]);
+        let total_txt = document.createTextNode(jdata[key]["total"]);
         let today_txt;
-        if (jdata[id]["today"])
+        if (jdata[key]["today"])
         {
             today_txt = document.createTextNode("是");
         }
@@ -40,11 +42,13 @@ function search()
             today_txt = document.createTextNode("否");
         }
         
+        id.appendChild(id_txt);
         name.appendChild(name_txt);
         nickname.appendChild(nickname_txt);
         total.appendChild(total_txt);
         today.appendChild(today_txt);
 
+        tr.appendChild(id);
         tr.appendChild(name);
         tr.appendChild(nickname);
         tr.appendChild(total);
@@ -67,20 +71,22 @@ function show_all()
 
     for (let i=2;i<keys.length;i++)
     {
-        let id = keys[i]
+        let key = keys[i]
 
         let tr = document.createElement("tr");
 
+        let id = document.createElement("td");
         let name = document.createElement("td");
         let nickname = document.createElement("td");
         let total = document.createElement("td");
         let today = document.createElement("td");
 
-        let name_txt = document.createTextNode(jdata[id]["name"]);
-        let nickname_txt = document.createTextNode(jdata[id]["nickname"]);
-        let total_txt = document.createTextNode(jdata[id]["total"]);
+        let id_txt = document.createTextNode(key);
+        let name_txt = document.createTextNode(jdata[key]["name"]);
+        let nickname_txt = document.createTextNode(jdata[key]["nickname"]);
+        let total_txt = document.createTextNode(jdata[key]["total"]);
         let today_txt;
-        if (jdata[id]["today"])
+        if (jdata[key]["today"])
         {
             today_txt = document.createTextNode("是");
         }
@@ -89,11 +95,13 @@ function show_all()
             today_txt = document.createTextNode("否");
         }
 
+        id.appendChild(id_txt);
         name.appendChild(name_txt);
         nickname.appendChild(nickname_txt);
         total.appendChild(total_txt);
         today.appendChild(today_txt);
 
+        tr.appendChild(id);
         tr.appendChild(name);
         tr.appendChild(nickname);
         tr.appendChild(total);

@@ -1,7 +1,7 @@
 let jdata;
 
 window.onload = function () {
-    let url = "member.json"
+    let url = "members.json"
     let request = new XMLHttpRequest();
     request.open("get", url);
     request.send(null);

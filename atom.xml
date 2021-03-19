@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>cow03haha&#39;s Dock</title>
+  
+  
+  <link href="https://cow03haha.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://cow03haha.github.io/"/>
+  <updated>2021-03-19T04:56:03.328Z</updated>
+  <id>https://cow03haha.github.io/</id>
+  
+  <author>
+    <name>cow03haha</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bash快捷鍵</title>
+    <link href="https://cow03haha.github.io/2021/03/19/bash-keyboard-shortcuts/"/>
+    <id>https://cow03haha.github.io/2021/03/19/bash-keyboard-shortcuts/</id>
+    <published>2021-03-19T04:48:16.000Z</published>
+    <updated>2021-03-19T04:56:03.328Z</updated>
+    
+    <content type="html"><![CDATA[<p>備註:有按鍵衝突的情況可以加<code>Shift</code>解決</p><ol><li><code>Tab</code> : 補全命令</li><li><code>Ctrl + C</code> : 終止當前的程序</li><li><code>Ctrl + Z</code> : 將當前的程序暫停執行並存在背景</li><li><code>Ctrl + D</code> : 登出當前的終端</li><li><code>Ctrl + L</code> : 清除畫面(clear)</li><li><code>Ctrl + A</code> : 光標移到行首</li><li><code>Ctrl + E</code> : 光標移到行尾</li><li><code>Ctrl + U</code> : 刪除光標前的指令</li><li><code>Ctrl + K</code> : 刪除光標後的指令</li><li><code>Ctrl + W</code> : 刪除光標前的單字</li><li><code>Ctrl + Y</code> : 查詢上一個歷史指令</li><li><code>Ctrl + P</code> : 查詢下一個歷史指令</li><li><code>Ctrl + R</code> : 搜尋特定歷史指令</li><li><code>Alt + F</code> : 光標往前一個單字</li><li><code>Alt + B</code> : 光標往後一個單字</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;備註:有按鍵衝突的情況可以加&lt;code&gt;Shift&lt;/code&gt;解決&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;Tab&lt;/code&gt; : 補全命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + C&lt;/code&gt; : 終止當前的程序&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Ctrl + Z&lt;</summary>
+      
+    
+    
+    
+    
+    <category term="linux" scheme="https://cow03haha.github.io/tags/linux/"/>
+    
+    <category term="bash" scheme="https://cow03haha.github.io/tags/bash/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>旅程的開始</title>
+    <link href="https://cow03haha.github.io/2021/03/18/beginning-of-journey/"/>
+    <id>https://cow03haha.github.io/2021/03/18/beginning-of-journey/</id>
+    <published>2021-03-18T13:17:11.000Z</published>
+    <updated>2021-03-18T13:17:31.371Z</updated>
+    
+    <content type="html"><![CDATA[<p>對啦，這是我blog的第一篇文章 :D</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;對啦，這是我blog的第一篇文章 :D&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>

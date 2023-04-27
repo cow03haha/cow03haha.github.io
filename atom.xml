@@ -6,7 +6,7 @@
   <link href="https://cow03haha.github.io/atom.xml" rel="self"/>
   
   <link href="https://cow03haha.github.io/"/>
-  <updated>2021-03-20T07:52:24.361Z</updated>
+  <updated>2023-04-27T18:59:52.568Z</updated>
   <id>https://cow03haha.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2023/04/27</title>
+    <link href="https://cow03haha.github.io/2023/04/28/daily/20230427/"/>
+    <id>https://cow03haha.github.io/2023/04/28/daily/20230427/</id>
+    <published>2023-04-27T18:47:40.000Z</published>
+    <updated>2023-04-27T18:59:52.568Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天開始在blog上寫日記(請忽略凌晨兩點的部分)<br>基本上就是廢文而已<br>可以直接忽略</p><p>也兩年多沒碰blog了(或是說根本沒碰過 lol)<br>重新熟悉了一下hexo cli，順便把主題更新<br>原本想說直接換一個主題<br>但我好懶得找 :D<br>之後找時間整理一下部屬的過程發上來<br>算是給我自己的筆記</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;今天開始在blog上寫日記(請忽略凌晨兩點的部分)&lt;br&gt;基本上就是廢文而已&lt;br&gt;可以直接忽略&lt;/p&gt;
+&lt;p&gt;也兩年多沒碰blog了(或是說根本沒碰過 lol)&lt;br&gt;重新熟悉了一下hexo cli，順便把主題更新&lt;br&gt;原本想說直接換一個主題&lt;br&gt;但我好懶得找 :D&lt;</summary>
+      
+    
+    
+    
+    <category term="daily" scheme="https://cow03haha.github.io/categories/daily/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>bash快捷鍵</title>
